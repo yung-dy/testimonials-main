@@ -19,7 +19,6 @@
      --m2: 2rem 0rem;
      --pad1: 2rem;
      --pad2: 1rem;
-     --pad3: 1rem;
      --br2: 3rem;
  
      /* Text-appearance - color, text-transform, decoration, align, vertical-align, white-space */
@@ -33,6 +32,7 @@
      --color8: hsl(0, 0%, 87%);
      --color9: hsl(224, 10%, 65%);
      --color0: hsl(224, 10%, 70%);
+     --shadow: hsl(224, 10%, 80%);
 }
 
 body {
@@ -56,7 +56,7 @@ h1, h3 {
 .content-header {
     display: flex;
     align-items: center;
-    gap: var(--pad3);
+    gap: var(--pad2);
     margin: 0 0 var(--pad2) 0;   
 }
 
@@ -74,6 +74,7 @@ h1, h3 {
     margin: var(--m2);
     padding: var(--pad1);
     border-radius: var(--br1);
+    box-shadow: 3rem 3rem 3rem var(--shadow);
 }
 
 .box1 .content-header img {
@@ -111,7 +112,7 @@ h1, h3 {
 
 .content-main :first-child {
     font-size: var(--fs1);
-    padding-bottom: var(--pad3);
+    padding-bottom: var(--pad2);
 }
 
 .content-main :last-child {
@@ -140,5 +141,22 @@ h1, h3 {
 
 .box5 h3 {
     color: var(--color0);
+}
+
+.attribution {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.attribution p:first-child {
+    margin-bottom: var(--br1);
+}
+
+.attribution a {
+    text-decoration: none;
+    color: inherit;
 }
 
