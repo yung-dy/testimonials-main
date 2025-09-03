@@ -20,6 +20,7 @@
      --pad1: 2rem;
      --pad2: 1rem;
      --br2: 3rem;
+     --gap1: 1.5rem;
  
      /* Text-appearance - color, text-transform, decoration, align, vertical-align, white-space */
      --color1: hsl(263, 55%, 52%);
@@ -51,6 +52,9 @@ h1, h3 {
 
 .container {
     margin: var(--m1);
+    max-width: 100%;
+    display: grid;
+    gap: var(--gap1);
 }
 
 .content-header {
@@ -71,7 +75,6 @@ h1, h3 {
 }
 
 .box {
-    margin: var(--m2);
     padding: var(--pad1);
     border-radius: var(--br1);
     box-shadow: 3rem 3rem 3rem var(--shadow);
@@ -160,3 +163,43 @@ h1, h3 {
     color: inherit;
 }
 
+@media screen and (min-width: 68rem) {
+    .container {
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-areas: 
+        'one one two five'
+        'three four four five';
+    }
+
+    .box:nth-child(1) {
+       grid-area: one;
+    }
+
+    .box:nth-child(2) {
+       grid-area: two;
+    }
+
+    .box:nth-child(3) {
+       grid-area: three;
+    }
+
+    .box:nth-child(4) {
+       grid-area: four;
+    }
+
+    .box:nth-child(5) {
+       grid-area: five;
+    }
+
+    .attribution {
+        flex-direction: row;
+        gap: var(--pad1);
+        
+    }
+
+    .attribution a {
+        text-decoration: underline;
+        color: var(--color1);
+    }
+}
