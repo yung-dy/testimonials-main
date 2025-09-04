@@ -1,4 +1,6 @@
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -33,6 +35,7 @@
      --m2: 2rem 0rem;
      --pad1: 2rem;
      --pad2: 1rem;
+     --pad3: 4rem;
      --br2: 3rem;
      --gap1: 1.5rem;
  
@@ -57,7 +60,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    margin: 7vh;
 }
 
 .sr-only {
@@ -75,8 +78,6 @@ h2, span {
 }
 
 .container {
-    margin: var(--m1);
-    max-width: 100%;
     display: grid;
     gap: var(--gap1);
 }
@@ -179,6 +180,7 @@ h2, span {
     text-align: center;
     font-family: inherit;
     text-decoration: none;
+    margin-top: var(--pad3);
 }
 
 .attribution p:first-child {
@@ -190,29 +192,57 @@ h2, span {
     color: inherit;
 }
 
+
+
+@media screen and (min-width: 48rem) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "one    two"
+        "three  four"
+        "five   five";
+    }
+     
+    .box:nth-child(1) {
+        grid-area: one;
+    }
+  
+    .box:nth-child(2) {
+        grid-area: two;
+    }
+  
+    .box:nth-child(3) {
+        grid-area: three;
+    }
+  
+    .box:nth-child(4) {
+        grid-area: four;
+    }
+  
+    .box:nth-child(5) {
+        grid-area: five;
+    }
+  }
+
 @media screen and (min-width: 68rem) {
     .container {
         display: grid;
-        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* grid-auto-columns: 1fr; */
         grid-template-areas: 
         'one one two five'
         'three four four five';
     }
 
-    /* body {
-        padding: 10vh;
-    }
-
+    /* 
     .container {
-        display: grid;
+       
         max-width: 81rem;
         margin: auto;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid grid-template-rows: 2fr 1fr;
-        grid-template-areas: 
-        'one one two five'
-        'three four four five';
-    } */
+         } */
 
     .box:nth-child(1) {
        grid-area: one;
