@@ -1,10 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+@font-face {
+    font-display: swap; 
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/barlow-semi-condensed-v15-latin-500.woff2') format('woff2');
+  }
+ 
+@font-face {
+    font-display: swap;
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/barlow-semi-condensed-v15-latin-600.woff2') format('woff2');
+  }
 
 :root {
      /* font properties - family, size, weight, style, variant, height*/
@@ -46,7 +60,16 @@ body {
     min-height: 100vh;
 }
 
-h1, h3 {
+.sr-only {
+    position: absolute;
+    overflow: hidden;
+    top: auto;
+    width: 0.08rem;
+    height: 0.08rem;
+    left: -625rem;
+}
+
+h2, span {
     font-size: var(--fs);
     font-weight: 200;
 }
@@ -65,7 +88,7 @@ h1, h3 {
     margin: 0 0 var(--pad2) 0;   
 }
 
-.content-header h3 {
+.content-header span {
     line-height: 1.5;
 }
 
@@ -92,6 +115,9 @@ h1, h3 {
 .box1 {
     background-color: var(--color1);
     color: var(--color3);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 4rem;
 }
 
 .box2 {
@@ -131,19 +157,19 @@ h1, h3 {
     color: var(--color8);
 }
 
-.box h3 {
+.box span {
     font-size: var(--fs2);
 }
 
-.box1 h3 {
+.box1 span {
     color: var(--color8);
 }
 
-.box2 h3 {
+.box2 span {
     color: var(--color9);
 }
 
-.box5 h3 {
+.box5 span {
     color: var(--color0);
 }
 
@@ -172,6 +198,21 @@ h1, h3 {
         'one one two five'
         'three four four five';
     }
+
+    /* body {
+        padding: 10vh;
+    }
+
+    .container {
+        display: grid;
+        max-width: 81rem;
+        margin: auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid grid-template-rows: 2fr 1fr;
+        grid-template-areas: 
+        'one one two five'
+        'three four four five';
+    } */
 
     .box:nth-child(1) {
        grid-area: one;
