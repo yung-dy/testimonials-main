@@ -91,11 +91,11 @@ h2, span {
     box-shadow: 3rem 3rem 3rem var(--shadow);
 }
 
-.box1 .content-header img {
+.box1 img {
     outline: 0.15rem solid var(--color5);
 }
 
-.box4 .content-header img {
+.box4 img {
     outline: 0.15rem solid var(--color1);
 }
 
@@ -126,18 +126,18 @@ h2, span {
 
 .content-main :first-child {
     font-size: var(--fs1);
-    padding-bottom: var(--pad2);
+    padding-block-end: var(--pad2);
 }
 
 .content-main :last-child {
     line-height: 1.5;
 }
 
-.box3 .content-main p:first-child, .box3 .content-main p:first-child  {
+.box3 p:first-child  {
     font-weight: 600;
 }
 
-.box1 .content-main p:last-child, .box2 .content-main p:last-child {
+.box1 p:last-child, .box2 p:last-child {
     color: var(--color8);
 }
 
@@ -163,16 +163,16 @@ h2, span {
     text-align: center;
     font-family: inherit;
     text-decoration: none;
-    margin-top: var(--pad3);
-}
-
-.attribution p:first-child {
-    margin-bottom: var(--br1);
+    margin-block-start: var(--pad3);
 }
 
 .attribution a {
     text-decoration: none;
     color: inherit;
+}
+
+.attribution p:first-child {
+    margin-block-end: var(--br1);
 }
 
 
