@@ -219,7 +219,7 @@ h2, span {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         /* grid-auto-columns: 1fr; */
-        max-width: 81rem;
+        max-width: 70rem;
         margin: auto;
         grid-template-areas: 
         'one one two five'
