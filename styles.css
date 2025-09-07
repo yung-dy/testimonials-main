@@ -186,6 +186,12 @@ h2, span {
         "three  four"
         "five   five";
     }
+
+    .box1 {
+        background-image: url(images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat;
+        background-position: top right 4rem;
+    }
      
     .box:nth-child(1) {
         grid-area: one;
@@ -213,19 +219,12 @@ h2, span {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         /* grid-auto-columns: 1fr; */
+        max-width: 81rem;
+        margin: auto;
         grid-template-areas: 
         'one one two five'
         'three four four five';
     }
-
-    /* 
-    .container {
-       
-        max-width: 81rem;
-        margin: auto;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid grid-template-rows: 2fr 1fr;
-         } */
     
     .box1 {
         background-image: url(images/bg-pattern-quotation.svg);
