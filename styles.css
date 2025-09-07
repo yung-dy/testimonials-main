@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
 *,
 *::after,
 *::before {
@@ -6,25 +8,9 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-display: swap; 
-    font-family: 'Barlow Semi Condensed';
-    font-style: normal;
-    font-weight: 500;
-    src: url('../fonts/barlow-semi-condensed-v15-latin-500.woff2') format('woff2');
-  }
- 
-@font-face {
-    font-display: swap;
-    font-family: 'Barlow Semi Condensed';
-    font-style: normal;
-    font-weight: 600;
-    src: url('../fonts/barlow-semi-condensed-v15-latin-600.woff2') format('woff2');
-  }
-
 :root {
      /* font properties - family, size, weight, style, variant, height*/
-     --ff: 'Barlow Semi Condensed', sans-serif;
+     --ff: "Barlow Semi Condensed", sans-serif;
      --fs: 0.84rem;
      --fs1: 1.3rem;
      --fs2: 0.72rem;
